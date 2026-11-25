@@ -4,7 +4,7 @@
 
   // Highlight the current page in the menu
   var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
-  document.querySelectorAll("nav a").forEach(function (a) {
+  document.querySelectorAll("nav a, .dock a").forEach(function (a) {
     var target = a.getAttribute("href").split("#")[0].toLowerCase();
     if (target === here) a.classList.add("active");
   });

@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Ajigo Fortune Odey</title>
 <meta name="description" content="Contact Ajigo Fortune Odey by WhatsApp or email.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script>(function(){try{var t=localStorage.getItem("theme");if(!t){var h=new Date().getHours();t=(h>=6&&h<18)?"light":"dark";}document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
 </head>
@@ -27,41 +30,39 @@
     </div>
   </div>
 </header>
-
-<div class="hero-wrap"><svg class="deco" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 40h140a10 10 0 0 1 10 10v80a10 10 0 0 1-10 10H90l-35 28v-28H30a10 10 0 0 1-10-10V50a10 10 0 0 1 10-10z"/><path d="M55 80h90M55 105h60"/></svg><div class="wrap hero">
-    <p class="eyebrow">Contact</p>
-    <h1>Let's talk</h1>
-    <p class="lead">Tell me what you need. I'm based in Calabar, Cross River State, Nigeria.</p>
-  </div></div>
-<main class="wrap">
-  <section class="reveal">
-    <h2>Send a message</h2>
-    <p>This opens WhatsApp with your note ready to send.</p>
-    <form id="contactForm">
-      <div>
-        <label for="cName">Your name</label>
-        <input id="cName" type="text" required placeholder="e.g. Chioma">
-      </div>
-      <div>
-        <label for="cMsg">What do you need?</label>
-        <textarea id="cMsg" required placeholder="Tell me a little about the work"></textarea>
-      </div>
-      <button class="btn" type="submit">Send on WhatsApp</button>
-    </form>
-  </section>
-
-  <section class="reveal">
-    <h2>Or reach me directly</h2>
-    <div class="btns">
-      <a class="btn alt" href="mailto:ajigofortune@gmail.com">Email me</a>
-      <a class="btn alt" href="https://wa.me/2349131201732">Open WhatsApp chat</a>
-    </div>
-  </section>
-</main>
+<div class="hero-band"><svg class="deco" viewBox="0 0 200 200" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M30 40h140a10 10 0 0 1 10 10v80a10 10 0 0 1-10 10H90l-35 28v-28H30a10 10 0 0 1-10-10V50a10 10 0 0 1 10-10z"/><path d="M55 80h90M55 105h60"/></svg><div class="wrap hero small">
+  <p class="eyebrow">Contact</p>
+  <h1>Let's talk</h1>
+  <p class="subtitle">Tell me what you need</p>
+  <p class="lead">I'm based in Calabar, Cross River State, Nigeria.</p>
+  
+</div></div>
+<section class="band  reveal"><div class="wrap">
+<h2>Send a message</h2>
+<p>This opens WhatsApp with your note ready to send.</p>
+<form id="contactForm">
+  <div><label for="cName">Your name</label><input id="cName" type="text" required placeholder="e.g. Chioma"></div>
+  <div><label for="cMsg">What do you need?</label><textarea id="cMsg" required placeholder="Tell me a little about the work"></textarea></div>
+  <button class="btn" type="submit">Send on WhatsApp</button>
+</form>
+</div></section>
+<section class="band dark center reveal"><div class="wrap">
+<h2>Or reach me directly</h2>
+<div class="btns" style="justify-content:center">
+  <a class="btn" href="https://wa.me/2349131201732">Open WhatsApp chat</a>
+  <a class="btn alt" href="mailto:ajigofortune@gmail.com">Email me</a>
+</div>
+</div></section>
 
 <footer>
   <div class="wrap">&copy; 2026 Ajigo Fortune Odey &middot; Calabar, Nigeria</div>
 </footer>
+<div class="dock">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
+</div>
 <button class="icon-btn" id="toTop" aria-label="Back to top">&uarr;</button>
 <script src="script.js"></script>
 </body>
