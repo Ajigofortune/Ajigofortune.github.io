@@ -1,5 +1,13 @@
 (function () {
   var root = document.documentElement;
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Highlight the current page in the menu
+  var here = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  document.querySelectorAll("nav a").forEach(function (a) {
+    var target = a.getAttribute("href").split("#")[0].toLowerCase();
+    if (target === here) a.classList.add("active");
+  });
 
   // Theme toggle (remembered when the browser allows it)
   try {
@@ -28,13 +36,6 @@
       menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
       menuBtn.textContent = open ? "\u2715" : "\u2630";
     });
-    nav.addEventListener("click", function (e) {
-      if (e.target.tagName === "A") {
-        nav.classList.remove("open");
-        menuBtn.textContent = "\u2630";
-        menuBtn.setAttribute("aria-expanded", "false");
-      }
-    });
   }
 
   // Scroll reveal
@@ -53,15 +54,38 @@
     items.forEach(function (el) { el.classList.add("show"); });
   }
 
-  // Back to top
+  // Scroll progress bar and back-to-top button
+  var bar = document.getElementById("progress");
   var toTop = document.getElementById("toTop");
+  window.addEventListener("scroll", function () {
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    if (bar && h > 0) bar.style.width = (window.scrollY / h) * 100 + "%";
+    if (toTop) toTop.classList.toggle("show", window.scrollY > 500);
+  });
   if (toTop) {
-    window.addEventListener("scroll", function () {
-      toTop.classList.toggle("show", window.scrollY > 500);
-    });
     toTop.addEventListener("click", function () {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+  }
+
+  // Typing effect on the home page
+  var typed = document.getElementById("typed");
+  if (typed) {
+    var words = ["research.", "write.", "draft.", "build websites.", "learn fast."];
+    if (reduceMotion) {
+      typed.textContent = words[0];
+    } else {
+      var w = 0, c = 0, deleting = false;
+      (function tick() {
+        var word = words[w];
+        typed.textContent = word.slice(0, c);
+        var delay = deleting ? 45 : 90;
+        if (!deleting && c === word.length) { deleting = true; delay = 1400; }
+        else if (deleting && c === 0) { deleting = false; w = (w + 1) % words.length; delay = 350; }
+        c += deleting ? -1 : 1;
+        setTimeout(tick, delay);
+      })();
+    }
   }
 
   // Service filters
