@@ -1,4 +1,5 @@
 (function () {
+  try { sessionStorage.setItem("seen", "1"); } catch (e) {}
   var root = document.documentElement;
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
