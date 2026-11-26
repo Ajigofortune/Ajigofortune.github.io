@@ -256,3 +256,5 @@ footer { padding: 30px 0 40px; background: var(--navy); color: #cfc8b8; font-siz
   .reveal { opacity: 1; transform: none; }
   .track, .hero-band::before, body { animation: none !important; }
 }
+.moments { display: flex; gap: 16px; flex-wrap: wrap; }
+.moments .frame { max-width: 260px; border-width: 4px; border-radius: 18px; }
