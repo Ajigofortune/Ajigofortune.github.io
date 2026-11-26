@@ -85,7 +85,7 @@ nav a:hover, nav a.active { color: var(--text); background: color-mix(in srgb, v
 }
 
 /* Bands */
-.band { padding: 68px 0; }
+.band { padding: 52px 0; }
 .band.alt { background: var(--bg2); }
 .band.dark { background: linear-gradient(160deg, var(--navy), var(--navy2)); color: #f7f0e4; }
 .band.dark p { color: #d8d2c4; }
@@ -115,7 +115,7 @@ nav a:hover, nav a.active { color: var(--text); background: color-mix(in srgb, v
   position: absolute; z-index: -1; right: 18px; bottom: -24px; width: 240px; height: 240px;
   color: #f7f0e4; opacity: .09; filter: blur(.6px); pointer-events: none;
 }
-.hero { padding-top: 84px; padding-bottom: 72px; }
+.hero { padding-top: 76px; padding-bottom: 48px; }
 .hero.small { padding-top: 64px; padding-bottom: 52px; }
 .eyebrow { font-size: 13px; letter-spacing: .2em; text-transform: uppercase; font-weight: 600; color: var(--gold); margin: 0 0 14px; }
 .hero h1 { font-size: clamp(42px, 10vw, 76px); line-height: 1.04; margin: 0 0 6px; color: #f7f0e4; letter-spacing: -.01em; }
@@ -171,10 +171,10 @@ h3 { font-size: 20px; margin: 0 0 8px; }
 .tags li:hover { background: var(--gold); color: #13213a; transform: translateY(-2px); }
 
 /* Marquee ticker */
-.marquee { overflow: hidden; white-space: nowrap; padding: 7px 0; background: var(--gold); color: #13213a; }
+.marquee { overflow: hidden; white-space: nowrap; padding: 4px 0; line-height: 1.2; background: var(--gold); color: #13213a; }
 .track { display: inline-block; animation: scrollx 34s linear infinite; }
-.track span { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
-.track span::after { content: "\2726"; margin: 0 16px; }
+.track span { font-size: 10px; line-height: 1.2; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.track span::after { content: "\2726"; margin: 0 14px; font-size: 8px; }
 @keyframes scrollx { to { transform: translateX(-50%); } }
 
 /* Stats */
@@ -269,3 +269,4 @@ footer { padding: 30px 0 40px; background: var(--navy); color: #cfc8b8; font-siz
 @keyframes ldOut{to{opacity:0;visibility:hidden}}
 @media (prefers-reduced-motion:reduce){#loader{display:none}}
 .t-app { background: linear-gradient(135deg, #13213a, #c98f2a); }
+.stat span { display: block; line-height: 1.35; margin-top: 4px; }
