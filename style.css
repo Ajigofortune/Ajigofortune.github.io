@@ -171,10 +171,10 @@ h3 { font-size: 20px; margin: 0 0 8px; }
 .tags li:hover { background: var(--gold); color: #13213a; transform: translateY(-2px); }
 
 /* Marquee ticker */
-.marquee { overflow: hidden; white-space: nowrap; padding: 14px 0; background: var(--gold); color: #13213a; }
+.marquee { overflow: hidden; white-space: nowrap; padding: 7px 0; background: var(--gold); color: #13213a; }
 .track { display: inline-block; animation: scrollx 34s linear infinite; }
-.track span { font-size: 14px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
-.track span::after { content: "\2726"; margin: 0 26px; }
+.track span { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.track span::after { content: "\2726"; margin: 0 16px; }
 @keyframes scrollx { to { transform: translateX(-50%); } }
 
 /* Stats */
